@@ -11,7 +11,7 @@ public class calc {
     }
 
 
-    private static String calc(String input) throws Exception {
+    public  static String calc(String input) throws Exception {
         int result;
         String[] parts = input.split(" ");
         if (parts.length!=3 || parts[1].length() != 1)
