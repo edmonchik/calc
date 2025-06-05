@@ -20,17 +20,14 @@ public class calc {
         char sign = parts[1].charAt(0);
         int num2 = Integer.parseInt(parts[2]);
         if (num1 >= 1 && num1 <= 10 && num2 >= 1 && num2 <= 10) {
-            switch (sign) {
-                case '+' -> result = num1 + num2;
-                case '-' -> result = num1 - num2;
-                case '/' -> {
-                    if (num1 / num2 == 0) {
-                        throw new Exception("деление на ноль запрещено");
-                    } else result = num1 / num2;
-                }
-                case '*' -> result = num1 * num2;
-                default -> throw new Exception("Неверный оператор");
-            }
+            result = switch (sign) {
+                case '+' -> num1 + num2;
+                case '-' -> num1 - num2;
+                case '/' -> num1 / num2;
+                case '*' -> num1 * num2;
+                default -> throw new Exception("Неверный опер`атор");
+            };
+            ;
         } else throw new Exception("числа не соответствуют требованиям");
         return String.valueOf(result);
     }
