@@ -25,9 +25,9 @@ public class calc {
                 case '-' -> num1 - num2;
                 case '/' -> num1 / num2;
                 case '*' -> num1 * num2;
-                default -> throw new Exception("Неверный опер`атор");
+                default -> throw new Exception("Неверный оператор");
             };
-            ;
+    
         } else throw new Exception("числа не соответствуют требованиям");
         return String.valueOf(result);
     }
